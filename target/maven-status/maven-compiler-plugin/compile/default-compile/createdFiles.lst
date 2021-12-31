@@ -1,0 +1,14 @@
+com/ipn/mx/modelo/dao/CategoriaDAO.class
+com/ipn/mx/modelo/dao/UsuarioDAO.class
+com/ipn/mx/modelo/entidades/Categoria.class
+com/ipn/mx/controlador/web/UsuarioMB.class
+com/ipn/mx/modelo/dao/ProductoDAO.class
+com/ipn/mx/utilerias/EnviarMail.class
+com/ipn/mx/modelo/dao/GraficaDAO.class
+com/ipn/mx/controlador/web/CategoriaMB.class
+com/ipn/mx/modelo/entidades/Usuario.class
+com/ipn/mx/controlador/web/BaseBean.class
+com/ipn/mx/modelo/entidades/Producto.class
+com/ipn/mx/modelo/dto/GraficaDTO.class
+com/ipn/mx/controlador/web/ProductoMB.class
+com/ipn/mx/utilerias/HibernateUtil.class

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" ></script>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="card border-primary mb-3">
+                <div class="card-header">
+                    <h2 class="text-primary text-center">
+                        Datos de Usuario
+                    </h2>
+                </div>
+                <div class="card-body text-primary">
+                    <div class="table-responsive">
+                        <f:view>
+                            <h:form id="frmUsuariosForm">
+                                <h:inputHidden id="accion" value="#{usuarioMB.accion}"/>
+                                <p:panelGrid columns="3" class="form-group row">
+                                    <p:outputLabel for="txtNombreUsuario" id="lblNombreUsuario" class="form-label" value="Nombre Usuario"/>
+                                    <p:inputText id="txtNombreUsuario" class="form-control" value="#{usuarioMB.dto.nombre}" required="true"/>
+                                    <p:message for="txtNombreUsuario" />
+
+                                    <p:outputLabel for="txtPaternoUsuario" id="lblPaternoUsuario" class="form-label" value="Paterno Usuario"/>
+                                    <p:inputText id="txtPaternoUsuario" class="form-control" value="#{usuarioMB.dto.paterno}" required="true"/>
+                                    <p:message for="txtPaternoUsuario" />
+
+                                    <p:outputLabel for="txtMaternoUsuario" id="lblMaternoUsuario" class="form-label" value="Materno Usuario"/>
+                                    <p:inputText id="txtMaternoUsuario" class="form-control" value="#{usuarioMB.dto.materno}" required="true"/>
+                                    <p:message for="txtMaternoUsuario" />
+
+
+                                    <p:outputLabel for="txtEmailUsuario" id="lblEmailUsuario" class="form-label" value="Email Usuario"/>
+                                    <p:inputText id="txtEmailUsuario" class="form-control" value="#{usuarioMB.dto.email}" required="true"/>
+                                    <p:message for="txtEmailUsuario" />
+
+                                    <p:outputLabel for="txtClaveUsuario" id="lblClaveUsuario" class="form-label" value="Clave Usuario"/>
+                                    <p:inputText id="txtClaveUsuario" class="form-control" value="#{usuarioMB.dto.claveUsuario}" required="true"/>
+                                    <p:message for="txtClaveUsuario" />
+
+                                    <p:outputLabel for="txtNicknameUsuario" id="lblNicknameUsuario" class="form-label" value="Nickname Usuario"/>
+                                    <p:inputText id="txtNicknameUsuario" class="form-control" value="#{usuarioMB.dto.nombreUsuario}" required="true"/>
+                                    <p:message for="txtNicknameUsuario" />
+
+                                    <p:commandButton action="#{usuarioMB.add()}"
+                                                     value="Guardar"
+                                                     class="btn btn-outline-primary"
+                                                     rendered="#{usuarioMB.modoCrear}"/>
+                                    
+                                    <p:commandButton action="#{usuarioMB.update()}"
+                                                     value="Actualizar"
+                                                     class="btn btn-outline-success"
+                                                     rendered="#{usuarioMB.modoActualizar}"/>
+                                </p:panelGrid>
+                            </h:form>
+                        </f:view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
